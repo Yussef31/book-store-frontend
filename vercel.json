@@ -5,7 +5,7 @@
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "https://book-store-frontend-6pbi.vercel.app"
+          "value": "https://book-store-frontend-6pbi-hyb67vwg0-yussef31s-projects.vercel.app/"
         },
         {
           "key": "Access-Control-Allow-Credentials",
