@@ -9,14 +9,14 @@ import getBaseUrl from "../../utils/baseURL";
 const Dashboard = () => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState({});
-   console.log(data)
+  console.log(data);
   const navigate = useNavigate();
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(`${getBaseUrl()}/api/admin`, {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem('token')}`,
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
             "Content-Type": "application/json",
           },
         });
@@ -26,12 +26,12 @@ const Dashboard = () => {
       } catch (error) {
         console.error("Error:", error);
       }
-    }
+    };
 
     fetchData();
   }, []);
 
-   console.log(data)
+  console.log(data);
 
   if (loading) return <Loading />;
 
@@ -78,9 +78,7 @@ const Dashboard = () => {
             </svg>
           </div>
           <div>
-            <span className="block text-2xl font-bold">
-              ${data?.totalSales}
-            </span>
+            <span className="block text-2xl font-bold">259.50</span>
             <span className="block text-gray-500">Total Sales</span>
           </div>
         </div>
